@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9fc4eab4d0a0824c84ce6e8f6fa3e3f, type: 3}
+  m_Name: Abillity Fireball
+  m_EditorClassIdentifier: 
+  itemID: 2bf804b8-0627-44c3-b65b-f0a54cb0075b
+  displayName: Fireball
+  description: 
+  icon: {fileID: 21300000, guid: a1ec2c0ddc0da634b85f0f465fec2d0d, type: 3}
+  pickup: {fileID: 743510599615345213, guid: 0715da6d594191c43a75bbdd035e8646, type: 3}
+  stackable: 0
+  price: 300
+  category: 4
+  _consumable: 0
+  _cooldown: 3
+  _targetingStrategy: {fileID: 11400000, guid: 7056984db89a95348ad68fefe8810a68, type: 2}
+  _filterStrategy:
+  - {fileID: 11400000, guid: 101031a586fe5024aa6c7f74a93cbe9e, type: 2}
+  _effectStrategy:
+  - {fileID: 11400000, guid: 785bab83b300a3942bf34819cbe22f72, type: 2}
+  - {fileID: 11400000, guid: 99782e13e3e793d41ba21188e53d780f, type: 2}
+  - {fileID: 11400000, guid: 5b26856c025d18f49bd0e0730d02233d, type: 2}
+  _manaCost: 60

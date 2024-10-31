@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cebd39bf11fd034c89cacfecd3ef8c1, type: 3}
+  m_Name: Targeting Fireball
+  m_EditorClassIdentifier: 
+  _raycastRadius: 1
+  _cursorTexture: {fileID: 2800000, guid: 2a2b4775272c890448e1bd6239fdfc84, type: 3}
+  _cursorHotspot: {x: 0, y: 0}
+  _layerMask:
+    serializedVersion: 2
+    m_Bits: 64
+  _areaAffectRadius: 5
+  _targetingPrefab: {fileID: 110219938867394864, guid: 336c516b1a21aa3449ccea840181a266,
+    type: 3}
+  _range: 10
