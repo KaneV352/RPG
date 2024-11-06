@@ -5,16 +5,19 @@ using System.Linq;
 using UnityEngine;
 using RPG.Core;
 using Random = System.Random;
+using RPG.SceneManagement;
 
 namespace RPG.Dialogue
 {
   public class PlayerConversant : MonoBehaviour
   {
+    [SerializeField] string playerName = "Player";
+
     private Dialogue _currentDialogue;
     private DialogueNode _currentNode = null;
     private AIConversant _currentConversant = null;
     private bool _isChoosing = false;
-    
+
     public event Action onConversantChange;
 
     public void StartConversation(AIConversant aiConversant, Dialogue dialogue)
@@ -28,7 +31,9 @@ namespace RPG.Dialogue
 
     public string GetSpeakerName()
     {
-      return "Irrigated Guard";
+      if (_isChoosing) return PlayerPrefs.GetString(SavingWrapper.LastSaveFile);
+
+      return _currentConversant.GetName();
     }
 
     public bool IsChoosing()
@@ -46,7 +51,7 @@ namespace RPG.Dialogue
       _currentNode = dialogueNode;
       TriggerEntryAction();
       _isChoosing = false;
-      
+
       Next();
     }
 
@@ -77,33 +82,32 @@ namespace RPG.Dialogue
       if (numberPlayerChoices > 0)
       {
         _isChoosing = true;
+        TriggerExitAction();
         onConversantChange();
         return;
       }
-      else
-      {
-        var children = _currentDialogue.GetAIChildren(_currentNode).ToArray();
-        int randomIndex = UnityEngine.Random.Range(0, children.Length);
-        TriggerExitAction();
-        _currentNode = children.ElementAt(randomIndex);
-        TriggerEntryAction();
-      }
+      var children = _currentDialogue.GetAIChildren(_currentNode).ToArray();
+      int randomIndex = UnityEngine.Random.Range(0, children.Length);
+      TriggerExitAction();
+      Debug.Log("Triggering exit action");
 
+      _currentNode = children.ElementAt(randomIndex);
+      TriggerEntryAction();
       onConversantChange();
     }
 
     public bool HasNext()
     {
       var result = _currentDialogue.GetAllChildren(_currentNode);
-      
+
       return result.Any();
     }
-    
+
     private void TriggerEntryAction()
     {
       if (!_currentNode) return;
       if (_currentNode.GetOnEntryAction() == "") return;
-      
+
       DialogueTrigger[] triggers = GetComponents<DialogueTrigger>();
       if (triggers.Length == 0) return;
 
@@ -112,13 +116,13 @@ namespace RPG.Dialogue
         trigger.Trigger(_currentNode.GetOnEntryAction());
       }
     }
-    
+
     private void TriggerExitAction()
     {
       if (!_currentNode) return;
       if (_currentNode.GetOnExitAction() == "") return;
-      
-      DialogueTrigger[] triggers = GetComponents<DialogueTrigger>();
+
+      DialogueTrigger[] triggers = _currentConversant.GetComponents<DialogueTrigger>();
       if (triggers.Length == 0) return;
 
       foreach (var trigger in triggers)

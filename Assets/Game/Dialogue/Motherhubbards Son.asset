@@ -22,7 +22,7 @@ MonoBehaviour:
     y: 184
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
   condition:
     and:
@@ -52,7 +52,7 @@ MonoBehaviour:
     y: 388
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
   condition:
     and: []
@@ -78,7 +78,7 @@ MonoBehaviour:
     y: 285
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
   condition:
     and:
@@ -113,7 +113,7 @@ MonoBehaviour:
     y: 282
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
   condition:
     and: []
@@ -153,14 +153,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Do I look like a doctor?
-  children: []
+  children:
+  - f4d5535c-eefa-4a3d-ae07-10fb227fa62a
   rect:
     serializedVersion: 2
     x: 303
     y: 79
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
   condition:
     and: []
@@ -189,7 +190,7 @@ MonoBehaviour:
     y: 71
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
   condition:
     and: []
@@ -214,7 +215,7 @@ MonoBehaviour:
     y: 180
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: GiveQuest
   condition:
     and: []
@@ -240,7 +241,7 @@ MonoBehaviour:
     y: 388
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
   condition:
     and:
@@ -258,3 +259,28 @@ MonoBehaviour:
         parameters:
         - e75a0c32-d41c-4651-8496-92cb958a8f1e
         negate: 0
+--- !u!114 &6073113333534301374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d682c531190610744a9a5e8627450547, type: 3}
+  m_Name: f4d5535c-eefa-4a3d-ae07-10fb227fa62a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Kay bye.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 553
+    y: 79
+    width: 200
+    height: 100
+  onEntryAction: 
+  onExitAction: 
+  condition:
+    and: []

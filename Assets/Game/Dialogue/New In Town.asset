@@ -16,14 +16,17 @@ MonoBehaviour:
   text: Did I say Newton? I'm actually from Springville.
   children:
   - 400a2ae0-a614-4c57-8617-2d06aff3999e
+  - 86baabc4-d11a-4bba-85e4-c9674e3ad295
   rect:
     serializedVersion: 2
     x: 792
     y: 234
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-7706724002735128974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46,8 +49,10 @@ MonoBehaviour:
     y: 24
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-7137721878253192398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,8 +75,10 @@ MonoBehaviour:
     y: 16
     width: 200
     height: 100
-  onEnterAction: TestSelection
+  onEntryAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-5808646823886583516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -94,8 +101,10 @@ MonoBehaviour:
     y: 196
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-3607042247456705817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,16 +119,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: Who?
-  children:
-  - 99b29bb8-7f70-4c6c-b314-b70a73ed5eb9
+  children: []
   rect:
     serializedVersion: 2
     x: 792
     y: 119
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &-2736274835188972913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,35 +147,14 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 1056
-    y: 27
+    x: 1076
+    y: 116.33333
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: Attack
---- !u!114 &-2269859173898635050
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d682c531190610744a9a5e8627450547, type: 3}
-  m_Name: 99b29bb8-7f70-4c6c-b314-b70a73ed5eb9
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: Don't worry about it. Say, do you have something to eat? I'm starving.
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 1054
-    y: 246
-    width: 200
-    height: 100
-  onEnterAction: 
-  onExitAction: TestObjective
+  condition:
+    and: []
 --- !u!114 &-109935732593986643
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,8 +179,10 @@ MonoBehaviour:
     y: 197
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,16 +222,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
   text: I haven't heard about any trouble.
-  children:
-  - 99b29bb8-7f70-4c6c-b314-b70a73ed5eb9
+  children: []
   rect:
     serializedVersion: 2
     x: 793
     y: 334
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &6388391180527436417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,8 +256,10 @@ MonoBehaviour:
     y: 91
     width: 200
     height: 100
-  onEnterAction: TestRootEntry
+  onEntryAction: 
   onExitAction: 
+  condition:
+    and: []
 --- !u!114 &7354686360060116108
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -289,5 +283,7 @@ MonoBehaviour:
     y: 12
     width: 200
     height: 100
-  onEnterAction: 
+  onEntryAction: 
   onExitAction: TestAIExit
+  condition:
+    and: []

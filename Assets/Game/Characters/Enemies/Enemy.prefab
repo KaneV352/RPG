@@ -15,7 +15,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2026042404671246249, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 78be5954566d2d848918e51832341fa3, type: 2}
     - target: {fileID: 3125957438692005694, guid: 750e3c6876a501e42b5827ec7a3d24d1,
@@ -71,6 +71,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 3861639546822428372}
+    - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 2139467360325040455}
+    - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 3180223992252116215}
@@ -91,6 +101,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
       value: Aggrevate
       objectReference: {fileID: 0}
@@ -106,6 +121,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RPG.UI.DamageText.DamageTextSpawner, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
       propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
       value: RPG.Control.AIController, Assembly-CSharp
       objectReference: {fileID: 0}
@@ -117,6 +137,11 @@ PrefabInstance:
     - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
         type: 3}
       propertyPath: onDie.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
+        type: 3}
+      propertyPath: takeDamage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 3307795589981818629, guid: 750e3c6876a501e42b5827ec7a3d24d1,
@@ -308,14 +333,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04821f510f07ff84b874685ba4438a01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _chaseDistance: 5
-  _suspicionTime: 3
-  _aggroCooldownTime: 5
-  _patrolPath: {fileID: 0}
-  _waypointTolerance: 1
-  _waypointDwellTime: 3
-  _patrolSpeedFraction: 0.2
-  _shoutDistance: 5
+  chaseDistance: 5
+  suspicionTime: 3
+  aggroCooldownTime: 5
+  patrolPath: {fileID: 0}
+  waypointTolerance: 1
+  waypointDwellTime: 3
+  patrolSpeedFraction: 0.2
+  shoutDistance: 5
 --- !u!114 &1325754121771582575
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,9 +382,34 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2251043482584258712, guid: e017b729393195445bb28e6d899d2d1f,
         type: 3}
+      propertyPath: health
+      value: 
+      objectReference: {fileID: 911615562094436208}
+    - target: {fileID: 2251043482584258712, guid: e017b729393195445bb28e6d899d2d1f,
+        type: 3}
+      propertyPath: foregroundBar
+      value: 
+      objectReference: {fileID: 7516449472762171262}
+    - target: {fileID: 2251043482584258712, guid: e017b729393195445bb28e6d899d2d1f,
+        type: 3}
+      propertyPath: healthBarCanvas
+      value: 
+      objectReference: {fileID: 3124818033254138783}
+    - target: {fileID: 2251043482584258712, guid: e017b729393195445bb28e6d899d2d1f,
+        type: 3}
       propertyPath: healthComponent
       value: 
       objectReference: {fileID: 911615562094436208}
+    - target: {fileID: 3615714379535104011, guid: e017b729393195445bb28e6d899d2d1f,
+        type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7031489483728833502, guid: e017b729393195445bb28e6d899d2d1f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8780335660456690937, guid: e017b729393195445bb28e6d899d2d1f,
         type: 3}
       propertyPath: m_RootOrder
@@ -423,6 +473,18 @@ PrefabInstance:
 --- !u!4 &2586518846589475320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8780335660456690937, guid: e017b729393195445bb28e6d899d2d1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6502966880962534657}
+  m_PrefabAsset: {fileID: 0}
+--- !u!223 &3124818033254138783 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 8170295660436774558, guid: e017b729393195445bb28e6d899d2d1f,
+    type: 3}
+  m_PrefabInstance: {fileID: 6502966880962534657}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &7516449472762171262 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3634658973209039487, guid: e017b729393195445bb28e6d899d2d1f,
     type: 3}
   m_PrefabInstance: {fileID: 6502966880962534657}
   m_PrefabAsset: {fileID: 0}

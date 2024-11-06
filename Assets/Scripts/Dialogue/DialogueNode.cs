@@ -18,7 +18,7 @@ namespace RPG.Dialogue
     [SerializeField]
     Rect rect = new Rect(0, 0, 200, 100);
     [SerializeField]
-    string onEnterAction;
+    string onEntryAction;
     [SerializeField]
     string onExitAction;
     [SerializeField]
@@ -46,7 +46,7 @@ namespace RPG.Dialogue
 
     public string GetOnEntryAction()
     {
-      return onEnterAction;
+      return onEntryAction;
     }
 
     public string GetOnExitAction()

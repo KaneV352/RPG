@@ -9,10 +9,10 @@ namespace RPG.SceneManagement
 {
   public class SavingWrapper : MonoBehaviour
   {
-    private const string LastSaveFile = "_lastSaveFile";
+    public static string LastSaveFile = "_lastSaveFile";
 
-    [FormerlySerializedAs("_fadeInTime")] [SerializeField] private float fadeInTime = 0.2f;
-    [FormerlySerializedAs("_fadeOutTime")] [SerializeField] private float fadeOutTime = 0.2f;
+    [FormerlySerializedAs("_fadeInTime")][SerializeField] private float fadeInTime = 0.2f;
+    [FormerlySerializedAs("_fadeOutTime")][SerializeField] private float fadeOutTime = 0.2f;
 
     public void NewGame(string saveFile)
     {
@@ -54,7 +54,7 @@ namespace RPG.SceneManagement
 
     private IEnumerator StartNewGame(string saveFile)
     {
-      Fader fader = FindObjectOfType<Fader>();
+      Fader fader = FindFirstObjectByType<Fader>();
       yield return fader.FadeOut(fadeOutTime);
       yield return GetComponent<SavingSystem>().LoadFirstScene(saveFile);
       yield return fader.FadeIn(fadeInTime);
@@ -62,7 +62,7 @@ namespace RPG.SceneManagement
 
     private IEnumerator LoadLastScene()
     {
-      Fader fader = FindObjectOfType<Fader>();
+      Fader fader = FindFirstObjectByType<Fader>();
       yield return fader.FadeOut(fadeOutTime);
       yield return GetComponent<SavingSystem>().LoadLastScene(GetCurrentSaveFile());
       yield return fader.FadeIn(fadeInTime);
@@ -70,7 +70,7 @@ namespace RPG.SceneManagement
 
     private IEnumerator LoadMainMenu()
     {
-      Fader fader = FindObjectOfType<Fader>();
+      Fader fader = FindFirstObjectByType<Fader>();
       yield return fader.FadeOut(fadeOutTime);
       yield return GetComponent<SavingSystem>().LoadMainMenu();
       yield return fader.FadeIn(fadeInTime);
